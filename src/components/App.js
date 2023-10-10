@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{useReducer} from "react"
+import reducer from './TaskReducer'
 import '../styles/App.css';
 const App = () => {
-
+  const [taskState, dispatch] = useReducer(reducer,{count : 0})
   return (
     <div id="main">
       <h2>Task Counter</h2>
